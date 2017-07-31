@@ -1,16 +1,18 @@
 <!-- README.md -->
 # **Yolo-Windows**
----
-1.[How to compile](#how_to_compile)
+
+1.[How_to_compile](#how_to_compile)
 
 2.[How to train (Pascal VOC data)](#how_to_train_voc)
 
 3.[How to use ini file](#how_to_use_ini)
 
 4.[How to use demo mode](#how_to_use_demo)
----
+
+
 # Some info
----
+
+
 This repository is forked from: (https://github.com/AlexeyAB/darknet)
 [More details](http://pjreddie.com/darknet/yolo/)
 
@@ -22,8 +24,8 @@ Requires:
   - To compile with different OpenCV version - change in file yolo.c each string look like **#pragma comment(lib, "opencv_core249.lib")** from 249 to required version.
   - With OpenCV will show image or video detection in window and store result to: test_dnn_out.avi
 
+<a name="how_to_compile"></a>
 ## How to compile
-<a name="how_to_copile"></a>
 
 1. If you have MSVS 2015, CUDA 8.0 and OpenCV 2.4.9 (with paths: `C:\opencv_2.4.9\opencv\build\include` & `C:\opencv_2.4.9\opencv\build\x64\vc12\lib` or `vc14\lib`), then start MSVS, open `build\darknet\darknet.sln`, set **x64** and **Release**, and do the: Build -> Build darknet
 
@@ -52,11 +54,13 @@ Requires:
       
     * add Windows system variable `cudnn` with path to CUDNN: https://hsto.org/files/a49/3dc/fc4/a493dcfc4bd34a1295fd15e0e2e01f26.jpg
       
-    * open `\darknet.sln` -> (right click on project) -> properties  -> C/C++ -> Preprocessor -> Preprocessor Definitions, and add at the beginning of line: `CUDNN;
+    * open `\darknet.sln` -> (right click on project) -> properties  -> C/C++ -> Preprocessor -> Preprocessor Definitions, and add at the beginning of line: `CUDNN;`
 
-## How to train (Pascal VOC data)
+
 <a name="how_to_train_voc"></a>
-**Before you perform these steps place the file `darknet.exe` in the directory of the repository (where the folders as `3rdparty`, `data`, `scripts` and others is located), further this directory will be called `\darknet`**
+## How to train (Pascal VOC data)
+
+**Before you perform these steps place the file `darknet.exe` in the directory of the repository (where the folders as `3rdparty`, `data`, `scripts` and others is located), further this directory will be called `darknet\`**
 
 1. Download pre-trained weights for the convolutional layers (76 MB): http://pjreddie.com/media/files/darknet19_448.conv.23 and put to the directory `darknet\`
 
@@ -81,16 +85,19 @@ If required change pathes in the file `darknet\data\voc.data`
 
 More information about training by the link: http://pjreddie.com/darknet/yolo/#train-voc
 
-## How to use ini file
+
 <a name="how_to_use_ini"></a>
+## How to use ini file
 
 The ini parser was taken from: https://github.com/benhoyt/inih
 
 By default in programm used `initialization.ini`
 
-## How to use demo mode
+
 <a name="how_to_use_demo"></a>
-**Before you perform these steps place the file `darknet.exe` in the directory of the repository (where the folders as `3rdparty`, `data`, `scripts` and others is located), further this directory will be called `\darknet`**
+## How to use demo mode
+
+**Before you perform these steps place the file `darknet.exe` in the directory of the repository (where the folders as `3rdparty`, `data`, `scripts` and others is located), further this directory will be called `darknet\`**
 
 1. Edit the `initialization.ini` file to suit your requirements. By default will run demo mode with image processing from webcam.
 
