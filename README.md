@@ -2,8 +2,11 @@
 # **Yolo-Windows**
 ---
 1.[How to compile](#how_to_compile)
+
 2.[How to train (Pascal VOC data)](#how_to_train_voc)
+
 3.[How to use ini file](#how_to_use_ini)
+
 4.[How to use demo mode](#how_to_use_demo)
 ---
 # Some info
@@ -20,7 +23,7 @@ Requires:
   - With OpenCV will show image or video detection in window and store result to: test_dnn_out.avi
 
 ## How to compile
-<a id="how_to_copile"></a>
+<a name="how_to_copile"></a>
 
 1. If you have MSVS 2015, CUDA 8.0 and OpenCV 2.4.9 (with paths: `C:\opencv_2.4.9\opencv\build\include` & `C:\opencv_2.4.9\opencv\build\x64\vc12\lib` or `vc14\lib`), then start MSVS, open `build\darknet\darknet.sln`, set **x64** and **Release**, and do the: Build -> Build darknet
 
@@ -52,7 +55,7 @@ Requires:
     * open `\darknet.sln` -> (right click on project) -> properties  -> C/C++ -> Preprocessor -> Preprocessor Definitions, and add at the beginning of line: `CUDNN;
 
 ## How to train (Pascal VOC data)
-<a id="how_to_train_voc"></a>
+<a name="how_to_train_voc"></a>
 **Before you perform these steps place the file `darknet.exe` in the directory of the repository (where the folders as `3rdparty`, `data`, `scripts` and others is located), further this directory will be called `\darknet`**
 
 1. Download pre-trained weights for the convolutional layers (76 MB): http://pjreddie.com/media/files/darknet19_448.conv.23 and put to the directory `darknet\`
@@ -79,13 +82,14 @@ If required change pathes in the file `darknet\data\voc.data`
 More information about training by the link: http://pjreddie.com/darknet/yolo/#train-voc
 
 ## How to use ini file
-<a id="how_to_use_ini"></a>
+<a name="how_to_use_ini"></a>
 
 The ini parser was taken from: https://github.com/benhoyt/inih
+
 By default in programm used `initialization.ini`
 
 ## How to use demo mode
-<a id="how_to_use_demo"></a>
+<a name="how_to_use_demo"></a>
 **Before you perform these steps place the file `darknet.exe` in the directory of the repository (where the folders as `3rdparty`, `data`, `scripts` and others is located), further this directory will be called `\darknet`**
 
 1. Edit the `initialization.ini` file to suit your requirements. By default will run demo mode with image processing from webcam.
